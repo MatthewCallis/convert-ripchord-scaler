@@ -1,0 +1,20 @@
+.grid {
+	display: grid;
+	grid-auto-flow: row dense;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1rem;
+	margin: 0 0 1rem 0;
+
+	.item {
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		background: var(--background-darker);
+		border-radius: 0.75rem;
+		position: relative;
+
+		&:hover {
+			background: var(--background-hover);
+		}
+	}
+}

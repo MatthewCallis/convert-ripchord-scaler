@@ -1,0 +1,35 @@
+header {
+	display: flex;
+	flex-direction: row;
+	padding: 1rem;
+	align-items: flex-start;
+	justify-content: space-between;
+  background: rgba(var(--background-hex), 0.8);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+ul.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & > li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media all and (min-width: 768px){
+  header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 1rem;
+  }
+  ul.nav {
+    display: flex;
+    flex-direction: row;
+    height: 1rem;
+  }
+}

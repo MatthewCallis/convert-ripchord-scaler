@@ -1,0 +1,116 @@
+{
+  "name": "convert-ripchord-scaler",
+  "version": "1.0.0",
+  "description": "Convert between Trackbout's Ripchord and Plugin Boutique's Scaler 2 chord pack formats.",
+  "author": "Matthew Callis <matthew.callis@gmail.com>",
+  "contributors": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthewCallis/convert-ripchord-scaler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatthewCallis/convert-ripchord-scaler/issues"
+  },
+  "homepage": "https://github.com/MatthewCallis/convert-ripchord-scaler",
+  "keywords": [],
+  "engines": {
+    "node": ">= 14"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.0.12",
+    "node-sass": "^8.0.0",
+    "tonal": "^4.8.0",
+    "uuid": "^9.0.0"
+  },
+  "optionalDependencies": {
+    "debug": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "@rollup/plugin-replace": "^2.4.2",
+    "ava": "^3.15.0",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-ava": "^12.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^33.0.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-no-inferred-method-name": "^2.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-optimize-regex": "^1.2.0",
+    "eslint-plugin-ramda": "^2.5.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-unicorn": "^31.0.0",
+    "eslint-plugin-xss": "^0.1.10",
+    "jsdoc": "^3.6.6",
+    "nyc": "^15.1.0",
+    "pre-commit": "^1.2.2",
+    "rollup": "^2.46.0",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "typescript": "^4.2.4"
+  },
+  "files": [
+    "esm/*",
+    "src/*",
+    "types/*"
+  ],
+  "main": "src/index.js",
+  "module": "./esm/index.js",
+  "types": "types/index.d.ts",
+  "typings": "types/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./src/index.js",
+      "import": "./esm/index.js"
+    }
+  },
+  "ava": {
+    "files": [
+      "test/**/*.test.js"
+    ],
+    "ignoredByWatcher": [
+      "!src/**/*.js"
+    ],
+    "concurrency": 1,
+    "failFast": false,
+    "tap": false,
+    "verbose": true
+  },
+  "nyc": {
+    "cache": true,
+    "all": true,
+    "check-coverage": false,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": []
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "make-demo": "rollup -c demo/rollup.config.js",
+    "make-styles": "node-sass --output-style compressed demo/styles/styles.scss demo/styles.css",
+    "make-types": "rm -fr types/ && mkdir types && tsc --project .tsconfig.json",
+    "report": "nyc report --reporter=html",
+    "test": "NODE_ENV=test nyc ava --serial",
+    "test-debug": "UTTORI_AUDIOWAV_DEBUG=1 DEBUG=AudioWAV NODE_ENV=test ava --serial",
+    "validate": "npm ls"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

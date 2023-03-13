@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="theme-color" content="#222222">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Convert Between Ripchord & Scaler, Convert Scaler to Ripchord, Convert Ripchord to Scaler">
+<meta property="og:description" content="Convert Between Ripchord & Scaler, Convert Scaler to Ripchord, Convert Ripchord to Scaler">
+<meta property="twitter:description" content="Convert Between Ripchord & Scaler, Convert Scaler to Ripchord, Convert Ripchord to Scaler">
+<meta property="og:title" content="Orchard Splicer - Convert Between Ripchord & Scaler">
+<meta property="twitter:title" content="Orchard Splicer - Convert Between Ripchord & Scaler">
+<meta property="og:site_name" content="Orchard Splicer - Convert Between Ripchord & Scaler">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:site" content="@superfamicom">
+<meta name="twitter:creator" content="@superfamicom">
+<meta property="article:publisher" content="https://preset.world">
+<meta property="og:url" content="https://preset.world/convert-ripchord-scaler">
+<link href="styles.css" rel="stylesheet">
+<title>Orchard Splicer 🍎 ➜ 🍊 - Convert Between Ripchord & Scaler, Convert Scaler to Ripchord, Convert Ripchord to Scaler</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">
+      <a href="/">Orchard Splicer 🍎 ➜ 🍊 - Convert Between Ripchord & Scaler Presets</a>
+    </h1>
+    <ul class="nav">
+      <li><a class="text-tertiary" href="/">Back to Preset World</a></li>
+    </ul>
+  </header>
+  <div class="container">
+    <div class="grid">
+      <div class="item">
+        <p>Convert between <a href="https://www.pluginboutique.com/product/3-Studio-Tools/93-Music-Theory-Tools/6439-Scaler-2">Plugin Boutique's Scaler 2</a> and <a href="https://trackbout.com/ripchord">Trackbout's Ripchord</a> chord pack formats.</p>
+        <p>Scaler lacks names for chords, so <a href="https://github.com/tonaljs/tonal">tonal</a> is used to determine chord names, and falls back to the keys used.</p>
+        <p>Scaler also lacks a trigger, so the trigger is set to auto incriment starting from C3 (48).</p>
+        <p>To convert files, choose them using the selector below and then click the Download link from the genereated output.</p>
+        <p>Stuck? <a href="https://github.com/MatthewCallis">Reach out to me!</a></p>
+        <br/>
+        <div class="file">
+          <label for="preset-file">
+            Choose preset files to convert:
+            <input type="file" id="preset-file" name="preset-file" multiple />
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer" role="contentinfo">
+    ©2022 <a href="/" title="Preset World">preset.world</a> | <a href="https://github.com/uttori" rel="external" title="Powered by Uttori">🔌 by Uttori</a> | <a href="https://twitter.com/superfamicom" rel="external" title="Help &amp; Support">Help &amp; Support</a>
+  </footer>
+</body>
+<script src="convert-ripchord-scaler.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVC34K9QTF"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EVC34K9QTF');
+</script>
+</body>
+</html>
